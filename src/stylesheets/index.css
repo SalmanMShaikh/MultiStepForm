@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+ font-family:  'Ubuntu', sans-serif;;
+}
+
+.regular-font {
+  font-weight: 400; 
+}
+
+.medium-font {
+  font-weight: 500;
+}
+
+.bold-font {
+  font-weight: 700;
+}
+
+
+.select-plans-card {
+  line-height: 21px;
+  width: 31%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.card-content {
+  font-size: 16px;
+  color: #555;
+}
+
+.circle {
+  background-color: white;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
+  margin: 3px; /* Add margin to create space between the circle and button corners */
+}
+
+.buttonbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  color: grey;
+  padding-bottom: 60px;
+  width:100%;
+}
+
+.pricing-button {
+  background-color:rgb(2,41,91);
+  padding: 0;
+  border: none;
+  border-radius: 15px;
+  width: 55px;
+  height: 30px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.buttonbox span {
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.active .circle {
+  transform: translateX(100%);
+  background-color: white;
+}
