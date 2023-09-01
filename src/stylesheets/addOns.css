@@ -11,6 +11,14 @@ padding: 15px;
 
 }
 
+.addons-container:hover{
+    cursor:pointer
+}
+
+.addons-container-active{
+    border: 1px solid rgb(74,63,243)
+}
+
 .firstRowFormAddon{
   
     width: 100%;
@@ -23,6 +31,14 @@ padding: 15px;
 .addons-icon{
     width: 20px;
     height: 20px;
-    border: 1px solid black;
-    border-radius: 2px;
+    border: 1px solid antiquewhite;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.addons-icon-active{
+    background-color: rgb(74,63,243)
 }
