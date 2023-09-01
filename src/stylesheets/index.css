@@ -72,10 +72,57 @@ body {
 
 .buttonbox span {
   margin: 0 10px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .active .circle {
   transform: translateX(100%);
   background-color: white;
+}
+
+.buttonContainer {
+  display: flex;
+ 
+  justify-content: space-between;
+}
+
+.buttonTwo {
+  margin-top: 1.5rem;
+  width: 20%;
+  height: 40px;
+
+  background-color: rgb(2,41,91);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+
+
+
+.backButton {
+  height: 40px;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  width: 20%;
+  color: grey;
+  margin-right: 10px;
+  background-color: rgb(249, 249, 251);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.backButton:hover{
+  cursor: pointer;
+  color: black
+}
+
+.m-b-20{
+  margin-bottom: 30px;
+}
+
+.active-step{
+  background: rgb(189,224,249)
 }

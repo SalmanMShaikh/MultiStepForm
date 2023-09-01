@@ -2,8 +2,10 @@ import {configureStore} from "@reduxjs/toolkit";
 
 
 const reducer = (state =  {
-    changingInput: "",
-    array: [],
+    step: 1,
+    name: '',
+    email: '',
+    phone: '',
     indexOfEditedElement: null,
     toggleCounter: 0,
     add: 0,
@@ -14,25 +16,32 @@ const reducer = (state =  {
 , action) => {
     
     switch (action.type) {
-        case "addToLocalStorage":
-               if(state.changingInput){
-                if(localStorage.getItem("todos")){
-                    let array = JSON.parse(localStorage.getItem("todos"))
-                    array.push({value:state.changingInput,checked:false , id: Math.random()});
-                    localStorage.setItem("todos", JSON.stringify(array))
-          
-                }else{
-                    localStorage.setItem("todos",JSON.stringify([{value:state.changingInput,checked:false, id: Math.random()}]));
-                }
-               }else{
-                   alert("please fill the field")
-               }
+        case "nextStep":
             return{
                 ...state,
-                add: state.add+1,
+                step: state.step+1,
             
             } 
-            
+        case 'previousStep':
+            return{
+                ...state,
+                step: state.step - 1
+            }
+       case 'setName':
+        return{
+            ...state,
+            name: action.data
+        }
+        case 'setEmail':
+            return{
+                ...state,
+                email: action.data
+            }
+        case 'setPhone':
+        return{
+            ...state,
+            phone: action.data
+        }   
         default: 
             return state
     }
