@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import PersonalInfo from "./components/personalInfo";
+import SelectPlans from "./components/selectPlans";
+import AddOns from "./components/addOns";
+import { useSelector } from 'react-redux';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const data = useSelector(state=> state)
+  useEffect(()=>{
+    console.log(data,'<<<<<<<<<<<<<<<<<<<<<<yo')
+  },[data])
+
+  return <>
+    {data && data.step === 1 && <PersonalInfo/>}
+    {data && data.step === 2  && <SelectPlans/>}
+    {data && data.step === 3 && <AddOns/>}
+    </>
 }
 
 export default App;
