@@ -15,11 +15,16 @@ function Summary() {
 
     const goToNext = () => {
         let options = getOptions();
+        console.log(data,'<<<<<<<<<<<<<,,,what')
+        let yearly= data.isYearly
+        if(data.isYearly !== true && data.isYearly !== false){
+            yearly = false
+        }
         let dataToSend = {
             name: data.name,
             email: data.email,
             phone: data.phone,
-            isYearly: data.isYearly,
+            isYearly: yearly,
             planType: data.activePlanCard,
             options,
             totalPrice
@@ -152,6 +157,20 @@ function Summary() {
                     </div>
                 </div>
             </div>
+            <div className="buttonContainerMobile">
+            <button
+              type="submit"
+              className="backButtonMobile bold-font"
+             onClick={goBack}
+            >
+              Go Back
+            </button>
+            <button className="buttonOneMobile bold-font" 
+            onClick={goToNext}
+            >
+             Confirm
+            </button>
+          </div>
         </section>
     )
 }

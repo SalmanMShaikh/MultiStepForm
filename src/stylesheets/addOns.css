@@ -39,6 +39,39 @@ padding: 15px;
     
 }
 
+.buttonContainerMobile{
+    display: none;
+    justify-content: space-between;
+  }
+
+.backButtonMobile{
+    display:none;
+    height: 40px;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 20%;
+    color: grey;
+    margin-right: 10px;
+    background-color: rgb(249, 249, 251);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
 .addons-icon-active{
     background-color: rgb(74,63,243)
+}
+
+@media(max-width: 900px){
+    .backButton{
+        display: none;
+      }
+      .backButtonMobile{
+        display: block;
+        position: absolute;
+        bottom:25px;
+        left: 20px;
+      }
+      .buttonContainerMobile{
+        display: flex;
+      }
 }

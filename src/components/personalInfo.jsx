@@ -34,10 +34,12 @@ function PersonalInfo() {
 
     const goToNext =()=>{
 
-        if(!isError.name && data.name.length > 0  && !isError.email && data.email.length > 0 && !isError.phone && data.phone.length > 0){
+        if(!isError.name && data.name && !isError.email && data.email && !isError.phone && data.phone){
          
             dispatch({type: 'nextStep'})
           
+        }else{
+          window.alert('please fill the details')
         }
 
     }
@@ -195,6 +197,9 @@ function PersonalInfo() {
                     </form>
                 </div>
             </div>
+            <button className="buttonOneMobile" onClick={()=>{goToNext()}}>
+                            Next Step
+                        </button>
         </section>
     )
 }

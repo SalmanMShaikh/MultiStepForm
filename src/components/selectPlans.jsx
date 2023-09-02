@@ -100,6 +100,20 @@ const SelectPlans = () => {
                     </div>
                 </div>
             </div>
+            <div className="buttonContainerMobile">
+            <button
+              type="submit"
+              className="backButtonMobile bold-font"
+             onClick={goBack}
+            >
+              Go Back
+            </button>
+            <button className="buttonOneMobile bold-font" 
+            onClick={goToNext}
+            >
+              Next Step
+            </button>
+          </div>
         </section>
     )
 }

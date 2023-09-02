@@ -7,6 +7,10 @@ body {
   font-weight: 400; 
 }
 
+.buttonContainerMobile{
+  display: none;
+  justify-content: space-between;
+}
 .medium-font {
   font-weight: 500;
 }
@@ -103,7 +107,18 @@ body {
 }
 
 
-
+.backButtonMobile{
+  display:none;
+  height: 40px;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  width: 20%;
+  color: grey;
+  margin-right: 10px;
+  background-color: rgb(249, 249, 251);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
 
 .backButton {
   height: 40px;
@@ -136,4 +151,39 @@ body {
 
 .active-step .step-button{
   color: rgb(2,41,91);
+}
+
+@media(max-width: 900px){
+  .firstRowForm{
+    flex-direction: column;
+  }
+  .select-plans-card{
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 85px;
+    margin-bottom: 20px;
+  }
+
+  .select-plans-card svg{
+    margin-right: 30px;
+  }
+
+  .buttonbox{
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  .backButton{
+    display: none;
+  }
+  .backButtonMobile{
+    display: block;
+    position: absolute;
+    bottom:25px;
+    left: 20px;
+  }
+  .buttonContainerMobile{
+    display: flex;
+  }
 }

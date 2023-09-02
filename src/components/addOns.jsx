@@ -40,7 +40,7 @@ function AddOns() {
                                     <div className={`addons-icon ${data.online_service ? 'addons-icon-active': ''}`}>
                                     {data.online_service && <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>}
                                     </div>
-                                    <div className='bold-font' style={{ marginLeft: '20px' }}>Online service<br /> <span className='regular-font' sttyle={{ fontSize: '13px', color: 'grey' }}>Access to multiplayer games</span></div>
+                                    <div className='bold-font' style={{ marginLeft: '20px' }}>Online service<br /> <span className='regular-font' style={{ fontSize: '13px', color: 'grey' }}>Access to multiplayer games</span></div>
                                 </div>
 
                                 <div style={{ fontSize: '14px', color: 'grey' }}>
@@ -55,7 +55,7 @@ function AddOns() {
                                     <div  className={`addons-icon ${data.larger_storage ? 'addons-icon-active': ''}`}>
                                     {data.larger_storage && <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>}
                                     </div>
-                                    <div className='bold-font' style={{ marginLeft: '20px' }}>Larger Storage<br /> <span className='regular-font' sttyle={{ fontSize: '13px', color: 'grey' }}>Extra 1TB of cloud save</span></div>
+                                    <div className='bold-font' style={{ marginLeft: '20px' }}>Larger Storage<br /> <span className='regular-font' style={{ fontSize: '13px', color: 'grey' }}>Extra 1TB of cloud save</span></div>
                                 </div>
 
                                 <div style={{ fontSize: '14px', color: 'grey' }}>
@@ -70,7 +70,7 @@ function AddOns() {
                                     <div className={`addons-icon ${data.customizable_profile ? 'addons-icon-active': ''}`}>
                                     {data.customizable_profile && <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9"><path fill="none" stroke="#FFF" stroke-width="2" d="m1 4 3.433 3.433L10.866 1"/></svg>}
                                     </div>
-                                    <div className='bold-font' style={{ marginLeft: '20px' }}>Customizable Profile<br /> <span className='regular-font' sttyle={{ fontSize: '13px', color: 'grey' }}>custom theme on your profile</span></div>
+                                    <div className='bold-font' style={{ marginLeft: '20px' }}>Customizable Profile<br /> <span className='regular-font' style={{ fontSize: '13px', color: 'grey' }}>custom theme on your profile</span></div>
                                 </div>
 
                                 <div style={{ fontSize: '14px', color: 'grey' }}>
@@ -98,6 +98,20 @@ function AddOns() {
                     </div>
                 </div>
             </div>
+            <div className="buttonContainerMobile">
+            <button
+              type="submit"
+              className="backButtonMobile bold-font"
+             onClick={goBack}
+            >
+              Go Back
+            </button>
+            <button className="buttonOneMobile bold-font" 
+            onClick={goToNext}
+            >
+              Next Step
+            </button>
+          </div>
         </section>
     )
 }
