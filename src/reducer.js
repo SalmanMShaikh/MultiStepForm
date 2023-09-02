@@ -6,11 +6,6 @@ const reducer = (state =  {
     name: '',
     email: '',
     phone: '',
-    indexOfEditedElement: null,
-    toggleCounter: 0,
-    add: 0,
-    edit: 0,
-    delete: 0
 
 }
 , action) => {
