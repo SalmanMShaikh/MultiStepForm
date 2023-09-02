@@ -35,19 +35,9 @@ function PersonalInfo() {
     const goToNext =()=>{
 
         if(!isError.name && data.name.length > 0  && !isError.email && data.email.length > 0 && !isError.phone && data.phone.length > 0){
-            let dataToSend = {
-                name: data.name,
-                email: data.email,
-                phone: data.phone
-            }
-            let token = cookies['auth']
          
             dispatch({type: 'nextStep'})
-            axios.post(`${config.apiUrl}/save_data`, dataToSend, {
-                headers:{
-                    Authorization : `Bearer ${token}`
-                }
-            })
+          
         }
 
     }

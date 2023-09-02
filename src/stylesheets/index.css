@@ -133,3 +133,7 @@ body {
 .active-plan-card{
   border: 1px solid blue;
 }
+
+.active-step .step-button{
+  color: rgb(2,41,91);
+}

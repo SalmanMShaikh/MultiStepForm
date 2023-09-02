@@ -6,7 +6,13 @@ const reducer = (state =  {
     name: '',
     email: '',
     phone: '',
-
+    isYearly: false,
+    price: 9,
+    // options: [],
+    activePlanCard: 'arcade',
+    online_service: false,
+    larger_storage: false,
+    customizable_profile: false,
 }
 , action) => {
     
@@ -37,6 +43,37 @@ const reducer = (state =  {
             ...state,
             phone: action.data
         }   
+        case 'changeTimePeriod':
+            return{
+                ...state,
+                isYearly:!state.isYearly
+            }
+        case 'savePlanType':
+            return {
+                ...state,
+                activePlanCard: action.data.type,
+                price: action.data.price
+            }
+        case 'setOnlineService':
+            return {
+                ...state,
+                online_service: !state.online_service
+            }
+        case 'setLargerStorage':
+                return {
+                    ...state,
+                    larger_storage: !state.larger_storage
+                }
+        case 'setCustomizableProfile':
+                return {
+                    ...state,
+                    customizable_profile: !state.customizable_profile
+                }
+
+        case 'resetStep':
+            return{
+                step: 1
+            }
         default: 
             return state
     }
